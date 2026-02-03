@@ -22,7 +22,7 @@ SELECT
             STRING_AGG(s.name, ' '),
             STRING_AGG(s.volume, ' ')
         ),
-        'date', COALESCE(STRING_AGG(DISTINCT p.date, ' '), ''),
+        'date', COALESCE(STRING_AGG(p.date, ' '), ''),
         'subject', CONCAT_WS(' ',
             STRING_AGG(subj.heading, ' '),
             STRING_AGG(subj.subheading, ' '),
